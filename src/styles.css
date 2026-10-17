@@ -1,0 +1,128 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 10px;
+  --radius-2xl: 12px;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-deep: var(--primary-deep);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-cream: var(--cream);
+  --color-surface: var(--surface);
+  --color-highlight: var(--highlight);
+  --color-highlight-foreground: var(--highlight-foreground);
+
+  --font-display: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+:root {
+  --radius: 0.5rem;
+
+  /* Paleta institucional Prime Potengi */
+  --primary-deep: oklch(0.34 0.10 258);     /* #1a3a7c */
+  --primary: oklch(0.55 0.15 252);          /* #2979c8 */
+  --primary-foreground: oklch(0.99 0.005 240);
+  --accent: oklch(0.76 0.11 220);           /* #4db8e8 */
+  --accent-foreground: oklch(0.22 0.04 258);
+  --cream: oklch(0.965 0.012 82);           /* #f5f0e8 */
+  --surface: oklch(0.975 0.006 248);        /* #f0f4f8 */
+  --highlight: oklch(0.62 0.20 25);         /* #e63946 vermelho institucional */
+  --highlight-foreground: oklch(0.99 0.005 240);
+
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.22 0.03 260);       /* #1a1f2e */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.22 0.03 260);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.22 0.03 260);
+
+  --secondary: oklch(0.975 0.006 248);
+  --secondary-foreground: oklch(0.28 0.06 258);
+  --muted: oklch(0.975 0.006 248);
+  --muted-foreground: oklch(0.50 0.025 260); /* #5a6478 */
+
+  --destructive: oklch(0.62 0.20 25);
+  --destructive-foreground: oklch(0.99 0.005 240);
+  --border: oklch(0.93 0.008 248);          /* #e8edf2 */
+  --input: oklch(0.93 0.008 248);
+  --ring: oklch(0.55 0.15 252);
+
+  /* Sombra única, muito sutil */
+  --shadow-soft: 0 1px 3px rgba(15, 23, 42, 0.04);
+  --shadow-hover: 0 2px 8px rgba(15, 23, 42, 0.06);
+}
+
+.dark {
+  --background: oklch(0.18 0.04 256);
+  --foreground: oklch(0.97 0.01 240);
+  --card: oklch(0.22 0.04 256);
+  --card-foreground: oklch(0.97 0.01 240);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 12%);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    color: var(--color-foreground);
+    letter-spacing: -0.015em;
+  }
+  h1 { font-weight: 700; line-height: 1.15; }
+  h2 { font-weight: 600; line-height: 1.25; }
+  h3 { font-weight: 600; line-height: 1.4; }
+  h4 { font-weight: 600; }
+}
+
+@utility bg-cream { background-color: var(--cream); }
+@utility bg-surface { background-color: var(--surface); }
+@utility shadow-soft { box-shadow: var(--shadow-soft); }
+@utility shadow-hover { box-shadow: var(--shadow-hover); }
+@utility label-tag {
+  font-size: 0.72rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-muted-foreground);
+}
+
+/* Aliases de compatibilidade (páginas legadas) */
+@utility shadow-card { box-shadow: var(--shadow-soft); }
+@utility shadow-elegant { box-shadow: var(--shadow-hover); }
+@utility bg-hero { background-color: var(--primary); }
+
