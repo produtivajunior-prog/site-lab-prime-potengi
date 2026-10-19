@@ -334,7 +334,7 @@ function CTAFinal() {
               className="inline-flex items-center gap-2 rounded-md px-5 py-3 text-sm font-semibold text-highlight-foreground transition hover:brightness-95"
               style={{ background: "var(--highlight)" }}
             >
-              Retire seu Exame <ArrowRight className="h-4 w-4" />
+              Acesse seu Exame <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </div>
