@@ -100,7 +100,7 @@ export function SiteHeader() {
             className="inline-flex items-center gap-2 rounded-md px-5 py-2.5 text-[13px] font-semibold tracking-[0.03em] text-highlight-foreground transition hover:brightness-95"
             style={{ background: "var(--highlight)" }}
           >
-            Retire seu Exame <ArrowRight className="h-4 w-4" strokeWidth={2} />
+            Acesse seu Exame <ArrowRight className="h-4 w-4" strokeWidth={2} />
           </Link>
         </div>
       </div>
@@ -145,7 +145,7 @@ export function SiteHeader() {
               className="inline-flex items-center justify-center gap-2 rounded-md px-4 py-3 text-sm font-semibold text-highlight-foreground"
               style={{ background: "var(--highlight)" }}
             >
-              Retire seu Exame <ArrowRight className="h-4 w-4" />
+              Acesse seu Exame <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </div>
